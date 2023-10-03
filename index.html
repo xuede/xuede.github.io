@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YourFri.day - Your Next-Gen Voice Agent Assistant</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://s3.us-east-1.amazonaws.com/chat.agent4.ai/chatbot.css" rel="stylesheet"/>
+    <script src="https://app.agent4.ai/chatjs/NGE5YjA4MDAtM2NhNC0xMHVlLTkyOTItMGE1OGE5ZmVhYzAy/"></script>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -16,10 +15,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            height: 100%;
-            overflow-x: hidden;
-            padding-bottom: 50px; /* Healthy margin at the bottom */
+            padding-bottom: 50px;
         }
 
         h1, h2, h3, p, img, button {
@@ -94,11 +90,35 @@
         }
 
         /* Chatbot CSS */
-        .chatbot {
-            /* Add your custom chatbot styles here */
-            background-color: #f5f5f5;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .chat-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 999;
+        }
+
+        .chat-icon-circle {
+            width: 60px;
+            height: 60px;
+            background-color: #fe4081;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .chat-icon:hover .chat-icon-circle {
+            background-color: #d5366d;
+        }
+
+        .chat-icon-text {
+            pointer-events: none;
         }
 
         /* Copyright */
@@ -145,7 +165,11 @@
 
     <footer>© 2023 YourFri.day</footer>
 
-    <!-- Chatbot script (placed in an obvious location for easy disabling) -->
-    <script src="https://app.agent4.ai/chatjs/NGE5YjA4MDAtM2NhNC0xMHVlLTkyOTItMGE1OGE5ZmVhYzAy/"></script>
+    <!-- Chatbot icon -->
+    <div class="chat-icon" id="chat-icon">
+        <div class="chat-icon-circle">
+            <span class="chat-icon-text">Chat</span>
+        </div>
+    </div>
 </body>
 </html>
